@@ -4,22 +4,15 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Choose an option:</h1>
+      {/* radio buttons for movies and series first task */}
+      <input type ="radio" name='button' value="Movies" id="movies"/>
+      <label htmlFor='movies'>Movies</label>
+      <input type ="radio" name='button' value="Series" id="series"/>
+      <label htmlFor='series'>Series</label>
     </div>
   );
 }
 
 export default App;
+
