@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './app';
 
-ReactDOM.render(<App />, document.getElementById('root'));
-import SegmentedControl from './components/SegmentedControl';
-
-const App = () => {
+function App() {
   return (
-    <div>
+    <div className="App">
       <h1>Choose an option:</h1>
-      <SegmentedControl />
+      <input type ="radio" name='button' value="Movies" id="movies"/>
+      <label htmlFor='movies'>Movies</label>
+      <input type ="radio" name='button' value="Series" id="series"/>
+      <label htmlFor='series'>Series</label>
     </div>
   );
-};
+}
 
 export default App;
