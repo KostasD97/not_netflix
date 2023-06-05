@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
-import "./App.css";
+//import "./App.css";
+
 //import { useState } from "react";
 
 // Radio Button ready
@@ -39,10 +40,11 @@ import "./App.css";
 // }
 
 import React, { useState } from "react";
+import MovieList from "./components/MovieList";
 
 // second task using list of movies...
 const App = () => {
-  const [movies, setmovies] = useState([
+  const [movies, setMovies] = useState([
     {
       Title: "Star Wars: Episode IV - A New Hope",
       Year: "1977",
