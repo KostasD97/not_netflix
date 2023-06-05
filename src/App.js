@@ -44,6 +44,7 @@ import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 import MovieList from "./components/MovieList.js";
+import SearchBox from "./components/SearchBox.js";
 import MovieListHeading from "./components/MovieListHeading.js";
 
 // second task using list of movies...
@@ -70,6 +71,7 @@ const App = () => {
     <div className="container-fluid movie-app">
       <div className="row">
         <MovieListHeading heading="Movies" />
+        <SearchBox heading="SearchBox" />
       </div>
       <div className="row">
         <MovieList movies={movies} />
