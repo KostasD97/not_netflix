@@ -13,16 +13,18 @@ const App = () => {
   // for the search bar
   const [searchValue, setSearchValue] = useState("");
   //take information from the list above for movies/series
+
   const getMovieRequest = async () => {
-  // whenever you type a word shows the most common movies/series
-  const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=77d1ee79`;
+    // whenever you type a word shows the most common movies/series
+    const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=77d1ee79`;
 
-  const response = await fetch(url);
-  const responseJson = await response.json();
+    const response = await fetch(url);
+    const responseJson = await response.json();
 
-  if(responseJson.Search){
-    setMovies(responseJson.Search);
-  }
+    //if there is a matching word on the list it shows the most common results
+    if (responseJson.Search) {
+      setMovies(responseJson.Search);
+    }
   };
 
   //when we try to enter a name on the search bar it gets the name from it
