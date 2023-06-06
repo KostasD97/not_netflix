@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MovieList = (props) => {
+const MovieSeriesList = (props) => {
   return (
     <>
       {props.movies.map((movie, index) => (
@@ -12,4 +12,4 @@ const MovieList = (props) => {
   );
 };
 
-export default MovieList;
+export default MovieSeriesList;
