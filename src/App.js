@@ -62,7 +62,7 @@ const App = () => {
     if(responseJson.Search){
       setMovies(responseJson.Search);
     }
-  };
+   };
 
   //when we try to enter a name on the search bar it gets the name from it
   useEffect(() => {
