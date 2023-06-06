@@ -1,57 +1,17 @@
-//import logo from "./logo.svg";
-//import "./App.css";
-
-//import { useState } from "react";
-
-// Radio Button ready
-
-// function App() {
-//   const [section, setSection] = useState("none");
-//   const onOptionChange = (e) => {
-//     setSection(e.target.value);
-//   };
-//   return (
-//     <div className="App">
-//       <h1>Choose an option:</h1>
-//       {/* radio buttons for movies and series first task */}
-//       <input
-//         type="radio"
-//         name="button"
-//         value="Movies"
-//         id="movies"
-//         checked={section==="Movies"}
-//         onChange={onOptionChange}
-//       />
-//       <label htmlFor="movies">Movies</label>
-//       <input
-//         type="radio"
-//         name="button"
-//         value="Series"
-//         id="series"
-//         checked={section==="Series"}
-//         onChange={onOptionChange}
-//       />
-//       <label htmlFor="series">Series</label>
-//       {/* bold selection of section */}
-//       {section && <p>
-//         Selected section is <strong>{section}</strong>
-//       </p>}
-//     </div>
-//   );
-// }
-
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
+// imports from the folder section
 import MovieList from "./components/MovieList.js";
 import SearchBox from "./components/SearchBox.js";
 import MovieListHeading from "./components/MovieListHeading.js";
 
 // second task using list of movies...
 const App = () => {
+  // for the movies list
   const [movies, setMovies] = useState([]);
+  // for the search bar
   const [searchValue, setSearchValue] = useState("");
-
   //take information from the list above
   const getMovieRequest = async () => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=77d1ee79`;
@@ -71,6 +31,9 @@ const App = () => {
 
   return (
     <div className="container-fluid movie-app mt-4 mb-4">
+      {/* call of the api for search bar
+          whenever you type a word to the search bar it
+          shows the most compatible one in order.. */}
       <div className="row">
         <MovieListHeading heading="Movies" />
         <SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
